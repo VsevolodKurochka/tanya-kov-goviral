@@ -7,13 +7,21 @@
 	+e('row')
 		position: relative
 
-	+e('title')
 		+min(sm)
+			min-height: 600px
+
+	+e('title')
+		margin-bottom: 45px
+		+min(sm)
+			margin-bottom: 60px
 			padding-left: 50px
 
 	+e('item')
 		+relative
 		
+		+min(sm)
+			+absolute
+
 		+ee('icon')
 			+absolute
 			height: 63px
@@ -44,7 +52,7 @@
 			%size-type-3
 
 				+min(xlg)
-					+size(300px, 300px)
+					+size(384px, 387px)
 
 		+m('1')
 			+bg('../img/result__item-1.png')
@@ -56,6 +64,7 @@
 
 		+m('2')
 			+bg('../img/result__item-2.png')
+			z-index: -1
 			@extend %size-type-1
 
 			#{$self}__item-icon
@@ -66,7 +75,7 @@
 		+m('3')
 			+bg('../img/result__item-3.png')
 			@extend %size-type-2
-
+			z-index: -2
 			#{$self}__item-icon
 				right: 65px
 				bottom: 90px
@@ -89,17 +98,23 @@
 				max-width: 230px
 
 			+m('1')
+				top: 0
+				left: 0
 				#{$self}__item-content
 					bottom: 90px
 					right: 45px
 					
 			+m('2')
+				bottom: 155px
+				left: 250px
 				#{$self}__item-content
 					bottom: 90px
 					left: 50%
 					transform: translateX(-50%)
 
 			+m('3')
+				top: 0
+				left: 500px
 				#{$self}__item-content
 					top: 140px
 					left: 45px
@@ -109,13 +124,17 @@
 					bottom: 90px
 
 			+m('4')
+				top: -170px
+				left: 615px
 				#{$self}__item-content
-					top: 130px
-					left: 50px
+					top: 175px
+					left: 96px
 					font-size: 15px
 					max-width: 190px
 
 			+m('5')
+				top: 3px
+				right: 170px
 				#{$self}__item-content
 					top: 25px
 					right: 55px
