@@ -1,3 +1,10 @@
 +b('social')
+	$self: &
 	+e('link')
 		cursor: pointer
+	+m('nav')
+		#{$self}
+			+e('link')
+				&:hover
+					path
+						fill: $color-brand-1
