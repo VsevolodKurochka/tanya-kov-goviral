@@ -1,0 +1,16 @@
++b.modal#modal-form
+	+e.box._default
+		+e.header
+			+e.P.title Проконсультироваться бесплатно
+			+e.BUTTON.close(data-close="modal") &times;
+		+e.body
+			+b.FORM.form._block(action="mail.php" method="POST")
+				+e.content
+					+e.row
+						+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+					+e.row
+						+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+					+e.row
+						+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+					+e.row
+						+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
