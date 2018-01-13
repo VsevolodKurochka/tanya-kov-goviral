@@ -4,8 +4,9 @@
 
 		&-content
 			display: inline-block
-
-		+max(md)
-			img
+			&-img
 				vertical-align: middle
-				max-height: 28px
+				height: 28px
+
+				+min(md)
+					height: 55px

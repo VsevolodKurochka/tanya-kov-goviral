@@ -136,5 +136,71 @@ class Modal {
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 		new Modal();
+
+		const themePrefix = '';
+
+		// Anchors links
+			function scrollTo(element, to, duration) {
+				if (duration <= 0) return;
+				var difference = to - element.scrollTop - 75;
+				var perTick = difference / duration * 10;
+				setTimeout(function() {
+					element.scrollTop = element.scrollTop + perTick;
+					if (element.scrollTop === to) return;
+					scrollTo(element, to, duration - 10);
+				}, 10);
+			}
+			
+			// Anchors
+				const anchors = document.getElementsByClassName('anchor');
+
+				for(let i = 0; i < anchors.length; i++){
+					anchors[i].addEventListener('click', (e) => {
+						e.preventDefault();
+						let href = this.getAttribute("href").replace("#", "");
+						let scrollAnchor = document.getElementById(href);
+						scrollTo(document.body, scrollAnchor.offsetTop, 600);
+					});
+				}
+			
+		// Navigation
+			const jsNav = document.getElementById('navigation');
+
+			// Navigation links
+				const jsNavLinks = document.querySelectorAll(`${themePrefix}nav__menu a[href*="#"]`);
+
+				for(var i = 0; i < jsNavLinks.length; i++){
+					jsNavLinks[i].addEventListener('click', (e) => {
+						e.preventDefault();
+
+						let vnavhref = this.getAttribute("href").replace("#", "");
+						let vnavscrollAnchor = document.getElementById(vnavhref);
+
+						removeClass(jsNavBtn, 'active');
+						removeClass(jsNav, `${themePrefix}nav__menu_active`);
+
+						scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
+
+					});
+				}
+
+			// Button HAMBURGER
+				const jsNavBtn = document.getElementById('js-vnav__btn');
+
+				if(exists(jsNavBtn)){
+					jsNavBtn.addEventListener('click', function(){
+						toggleClass(this, 'active');
+						toggleClass(jsNav, `${themePrefix}nav__menu_active`);
+					});
+				}
+
+
+			// Click on toggle element in navigation
+				const jsNavText = document.getElementById('js-vnav-addition');
+				if(exists(jsNavText)){
+					jsNavText.addEventListener('click', function() {
+						toggleClass(this, 'active');
+					});	
+				}
 	});
 }());
