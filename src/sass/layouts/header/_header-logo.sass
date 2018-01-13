@@ -1,0 +1,112 @@
++b('header')
+	+e('logo')
+		width: 250px
+
+		+ee('content')
+			position: relative
+			&:before
+				+pseudo
+				left: 0
+				top: 0
+				+bg('../img/header-logo.png')
+				z-index: -1
+				+size(250px, 167px)
+
+				+min(md)
+					+size(300px, 201px)
+
+				+min(lg)
+					+size(450px, 301px)
+
+				+min(xlg)
+					+size(541px, 362px)
+
+
+			+ee('header')
+				position: relative
+				+relative(13px, null, null, 20px)
+		
+		
+		+ee('icon')
+			height: 40px
+
+		+ee('subtitle')
+			font-size: 12px;
+			font-weight: 700;
+			
+
+		+ee('title')
+			max-width: 100px
+			margin-top: 29px
+			margin-left: 120px
+			font-size: 14px
+			line-height: 1.1
+			
+
+		+ee('footer')
+			margin-top: 60px
+			text-align: right
+
+		+min(md)
+			width: 300px
+
+			+ee('content')
+				+ee('header')
+					top: 15px
+					left: 25px
+
+			+ee('icon')
+				height: 50px
+			
+			+ee('subtitle')
+				font-size: 14px
+
+			+ee('title')
+				max-width: 150px
+				margin-top: 35px
+				margin-left: 120px
+				font-size: 18px
+
+		+min(lg)
+			width: 450px
+
+			+ee('content')
+				+ee('header')
+					top: 20px
+					left: 60px
+
+			+ee('icon')
+				height: 90px
+
+			+ee('subtitle')
+				font-size: 17px
+
+			+ee('title')
+				max-width: 185px
+				margin-top: 50px
+				margin-left: 200px
+				font-size: 24px
+
+		+min(xlg)
+			width: 540px
+			
+			+ee('content')
+				+ee('header')
+					top: 20px
+					left: 60px
+
+			+ee('icon')
+				height: 120px
+
+			+ee('title')
+				font-size: 30px
+				max-width: 230px
+				margin-top: 50px
+				margin-left: 225px
+
+			+ee('subtitle')
+				padding-left: 35px
+				font-size: 20px
+
+			+ee('footer')
+				margin-top: 70px

@@ -1,0 +1,48 @@
++b('header')
+	+e('nav')
+		list-style: none
+		
+		+min(sm)
+			padding-left: 30px
+
+		+ee('item')
+			+relative
+
+			+m('1')
+				margin-top: -150px
+				+size(362px, 541px)
+				+bg('../img/header__nav-item-1.png')
+
+
+			+ee('link')
+
+				$link: &
+
+				+absolute(0, null, null, 0)
+				+size(100%)
+				text-decoration: none
+				color: $color-white
+				line-height: 1
+				font-weight: 700
+
+				
+				+ee('text')
+					+absolute
+					+transition
+
+					font-size: 30px
+					padding: 10px
+
+					+m('1')
+						width: 100%
+						top: 50%
+						transform: translateY(-50%)
+						text-align: center
+
+					+min(md)
+						font-size: 36px
+
+				&:hover &
+					+ee('text')
+						color: $color-brand-1
+						background-color: #fff
