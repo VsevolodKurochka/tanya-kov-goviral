@@ -1,16 +1,8 @@
 extends /extends/layout
 block variables
-	- var title = "Gulp Pro Starter Template";
-	- var description = "Gulp Pro Starter Template";
+	- var title = "GoViral";
+	- var description = "GoViral";
 block nav
-	//include /sections/nav
+	include /sections/nav
 block content
-	//include /sections/header
-	+b.BUTTON.btn(data-action="modal" data-open="#example-id") Open Modal
-	+b.modal._to-top#example-id
-		+e.box._default
-			+e.header
-				+e.P.title Modal title
-				+e.BUTTON.close(data-close="modal") &times;
-			+e.body
-				p Lorem....
+	include /sections/header
