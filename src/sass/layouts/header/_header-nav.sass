@@ -1,17 +1,109 @@
 +b('header')
 	+e('nav')
+		display: flex
+		flex:
+			flow: row wrap
+			basis: 100%
+			grow: 1
 		list-style: none
 		
+		+max(sm)
+			max-width: 300px
+			margin-top: -40px
+			+padding-x(15px)
+
 		+min(sm)
+			flex:
+				basis: 0
+		
+		+min(sm)
+			padding-left: 15px
+
+		+min(md)
 			padding-left: 30px
 
 		+ee('item')
 			+relative
+			
+			@at-root
+				%item-size
+					
+					+size(135px, 200px)
+
+					+min(sm)
+						+size(220px, 330px)
+
+					+min(md)
+						+size(250px, 375px)
+
+					+min(lg)
+						+size(302px, 501px)
+
+					+min(xlg)
+						+size(362px, 541px)
 
 			+m('1')
-				margin-top: -150px
-				+size(362px, 541px)
+				
 				+bg('../img/header__nav-item-1.png')
+				@extend %item-size
+
+				+min(sm)
+					margin-top: -150px
+
+			+m('2')
+				+bg('../img/header__nav-item-2.png')
+				@extend %item-size
+				
+				+max(sm)
+					top: 30px
+					left: 15px
+
+				+min(sm)
+					margin-left: 30px
+					+max(lg)
+						top: -45px
+
+				+min(xlg)
+					margin-left: 60px
+
+			+m('3')
+				margin-top: 30px
+				+bg('../img/header__nav-item-3.png')
+				@extend %item-size
+
+				+min(sm)
+					margin-top: -125px
+
+			+m('4')
+				margin-top: 30px
+				+bg('../img/header__nav-item-4.png')
+				
+				+size(200px, 135px)
+
+				+max(sm)
+					margin-top: 10px
+					margin-left: -65px
+					left: 5px
+
+				+min(sm)
+					+size(330px, 220px)
+					margin-top: -345px
+					margin-left: 125px
+
+				+min(md)
+					+size(375px, 250px)
+					margin-top: -390px
+					margin-left: 140px
+
+				+min(lg)
+					+size(420px, 281px)
+					margin-top: -500px
+					margin-left: 195px
+
+				+min(xlg)
+					+size(541px, 362px)
+					margin-top: -572px
+					margin-left: 211px
 
 
 			+ee('link')
@@ -24,14 +116,24 @@
 				color: $color-white
 				line-height: 1
 				font-weight: 700
-
+				z-index: 1
 				
 				+ee('text')
 					+absolute
 					+transition
 
-					font-size: 30px
+					font-size: 18px
 					padding: 10px
+
+					&:before
+						+pseudo
+						left: 0
+						top: 0
+						+size(100%)
+						background-color: $color-white
+						+transition
+						transform: scaleX(0)
+						z-index: z('below')
 
 					+m('1')
 						width: 100%
@@ -39,10 +141,45 @@
 						transform: translateY(-50%)
 						text-align: center
 
-					+min(md)
+					+m('2')
+						transform: rotate(-90deg)
+						transform-origin: center
+						top: 50px
+						
+						+max(sm)
+							left: -10px
+
+						+min(sm)
+							top: 100px
+
+					+m('3')
+						transform: rotate(-90deg)
+						transform-origin: bottom
+						top: 30px
+						
+						+max(sm)
+							left: -10px
+
+						+min(sm)
+							top: 100px
+
+					+m('4')
+						top: 0%
+						width: 68%
+
+						+min(sm)
+							width: 67%
+							top: 15%
+						text-align: center
+					
+					+min(lg)
+						font-size: 26px
+
+					+min(xlg)
 						font-size: 36px
 
 				&:hover &
 					+ee('text')
 						color: $color-brand-1
-						background-color: #fff
+						&:before
+							transform: none
