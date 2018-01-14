@@ -1,9 +1,12 @@
 +b("list")
-	&_cancel
+	+m('check')
 		li
 			padding-left: 30px
-
+			&:not(:last-child)
+				margin-bottom: 10px
+				
 			&:after
-				top: 0
+				top: 4px
 				left: 0
-				+size(37px)
+				+size(15px)
+				+bg('../img/list-check.svg')
