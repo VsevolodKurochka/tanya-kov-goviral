@@ -1,4 +1,18 @@
 +b('team')
+	
+	+relative
+	z-index: 1
+
+	+e('background')
+		+absolute(0, null, null, 0)
+		z-index: -1
+		+min(sm)
+			max-width: 40%
+		+min(md)
+			max-width: 60%
+		+min(lg)
+			max-width: none
+
 	+e('item')
 		
 		+transition
@@ -22,7 +36,7 @@
 			font-size: 20px
 
 			+min(sm)
-				font-size: 25px
+				font-size: 22px
 
 			+min(md)
 				font-size: 30px
