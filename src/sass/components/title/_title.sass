@@ -2,15 +2,21 @@
 $sizes: ("title-section": ('default': 25px, 'sm': 30px, 'md': 40px, 'lg': 50px, 'xlg': 72px))
 
 %title-default
-  margin-top: 5px
-  margin-bottom: 15px
-  line-height: 1.2
-  font-weight: normal
+	margin-top: 5px
+	margin-bottom: 15px
+	line-height: 1.2
+	font-weight: normal
 
 +b('title')
 
-  +ee('section')
-  
-    +fs("title-section")
+	+ee('section')
+	
+		+fs("title-section")
 
-    @extend %title-default
+		+m('center')
+			text-align: center
+			margin-bottom: 30px
+			+min(md)
+				margin-bottom: 60px
+
+		@extend %title-default
