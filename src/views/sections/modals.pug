@@ -14,3 +14,19 @@
 						+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
 					+e.row
 						+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
+
++b.modal#modal-politic
+	+e.box._default
+		+e.header
+			+e.P.title Политика конфиденциальности
+			+e.BUTTON.close(data-close="modal") &times;
+		+e.body
+			p Политика конфиденциальности
+
++b.modal#modal-otkaz
+	+e.box._default
+		+e.header
+			+e.P.title Отказ от ответственности
+			+e.BUTTON.close(data-close="modal") &times;
+		+e.body
+			p Отказ от ответственности

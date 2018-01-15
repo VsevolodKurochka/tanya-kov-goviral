@@ -33,3 +33,18 @@
 									+e.INPUT.control(name="vphone" type="phone" placeholder="Номер телефона")
 								+e.row
 									+e.BUTTON.submit.btn._brand-1.effect._bounce-top(type="submit") Отправить
+	+e.info
+		+e.container.container
+			+e.row.row
+				.col-12.col-sm-2.col-md-1
+					+e.IMG.info-logo(src="img/logo-1.svg")
+				+e.info-content.col-12.col-sm-10.col-md-11
+					+e.info-buttons
+						+e.info-buttons-row
+							+e.BUTTON.info-button(data-action="modal" data-open="#modal-politic") Политика конфиденциальности
+							+e.BUTTON.info-button(data-action="modal" data-open="#modal-otkaz") Отказ от ответственности
+						+e.info-buttons-row
+							+e.A.info-link(href="tel: (067) 127 00 27") (067) 127 00 27
+							+e.A.info-link(href="tel: (067) 127 02 27") (067) 127 02 27
+					+e.info-social
+						+social('_inline _brand-1')

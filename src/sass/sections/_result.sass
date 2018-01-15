@@ -8,6 +8,13 @@
 		position: relative
 
 		+min(sm)
+			min-height: 400px
+
+		+min(lg)
+			left: 75px
+
+		+min(xlg)
+			margin-left: 100px
 			min-height: 600px
 
 	+e('title')
@@ -39,28 +46,30 @@
 		@at-root
 			%size-type-1
 				+min(lg)
-					+size(350px, 200px)
+					+size(350px, 250px)
 
 				+min(xlg)
 					+size(450px, 320px)
 
 			%size-type-2
-
+	
+				+min(lg)
+					+size(270px, 380px)
+	
 				+min(xlg)
 					+size(320px, 450px)
 
 			%size-type-3
 
+				+min(lg)
+					+size(280px)
+
 				+min(xlg)
-					+size(384px, 387px)
+					+size(384px)
 
 		+m('1')
 			+bg('../img/result__item-1.png')
 			@extend %size-type-1
-
-			#{$self}__item-icon
-				top: 30px
-				left: 60px
 
 		+m('2')
 			+bg('../img/result__item-2.png')
@@ -76,26 +85,84 @@
 			+bg('../img/result__item-3.png')
 			@extend %size-type-2
 			z-index: -2
-			#{$self}__item-icon
-				right: 65px
-				bottom: 90px
 
 		+m('4')
 			+bg('../img/result__item-4.png')
 			@extend %size-type-3
 
-			#{$self}__item-icon
-				top: 20px
-				right: 60px
+			
 
 		+m('5')
 			+bg('../img/result__item-5.png')
 			@extend %size-type-1
 
+		// LG
+		+min(lg)
+			
+			#{$self}__item-content
+				max-width: 200px
+				font-size: 14px
+
+			+m('1')
+				top: 0
+				left: 0
+				#{$self}__item-icon
+					top: 15px
+					left: 60px
+
+				#{$self}__item-content
+					right: 50px
+					bottom: 66px
+					max-width: 150px
+					
+			+m('2')
+				bottom: 52px
+				left: 195px
+				#{$self}__item-content
+					bottom: 75px
+					left: 50%
+					transform: translateX(-50%)
+
+			+m('3')
+				top: -15px
+				left: 381px
+				#{$self}__item-content
+					top: 120px
+					left: 40px
+
+				#{$self}__item-icon
+					right: 50px
+					bottom: 90px
+
+			+m('4')
+				top: -125px
+				left: 485px
+				#{$self}__item-content
+					top: 120px
+					left: 50px
+					max-width: 175px
+
+				#{$self}__item-icon
+					top: 20px
+					right: 60px
+
+			+m('5')
+				top: -5px
+				left: 595px
+				#{$self}__item-content
+					top: 20px
+					right: 30px
+					text-align: left
+				#{$self}__item-icon
+					right: 145px
+					bottom: 70px
+
+		// XLG
 		+min(xlg)
 			
 			#{$self}__item-content
 				max-width: 230px
+				font-size: 16px
 
 			+m('1')
 				top: 0
@@ -134,7 +201,7 @@
 
 			+m('5')
 				top: 3px
-				right: 170px
+				left: 745px
 				#{$self}__item-content
 					top: 25px
 					right: 55px
