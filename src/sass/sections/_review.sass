@@ -1,0 +1,87 @@
++b('review')
+	
+	+padding-y(45px)
+
+	+min(xlg)
+		padding-top: 120px
+
+	+e('content')
+		margin-bottom: 45px
+
+		+min(md)
+			margin-bottom: 60px
+
+	+e('footer')
+		text-align: center
+
+	+e('item')
+		
+		+min(lg)
+			+padding-x(45px)
+
+		+min(xlg)
+			+padding-x(75px)
+
+		+ee('content')
+
+			+relative
+			padding-top: 60px
+			margin-bottom: 30px
+
+			&:before
+				+pseudo
+				left: 0
+				top: 0
+				+size(45px)
+				+bg('../img/icon-review.svg')
+
+
+			+min(lg)
+				padding-top: 80px
+				margin-bottom: 45px
+				&:before
+					+size(66px)
+
+		+ee('image')
+			+size(90px)
+			object-fit: cover
+			border-radius: 10px
+			box-shadow: -25px 15px 50px 0px rgba(12, 12, 15, .15)
+			margin-right: 1px
+
+		+ee('footer')
+			display: flex
+			align-items: center
+			flex-flow: row-reverse wrap
+			justify-content: flex-start
+
+		+ee('info')
+			padding-right: 30px
+			text-align: right
+
+			+ee('name')
+				color: $color-brand-1
+				font-weight: bold
+				font-size: 20px
+				+min(md)
+					font-size: 24px
+
+	.owl
+		&-item
+			padding-bottom: 45px
+		&-dot
+			display: inline-block
+			+size(15px)
+			border-radius: 100%
+			border: 1px solid $color-brand-1
+			+transition
+
+			&:hover,
+			&.active
+				background-color: $color-brand-1
+
+			&:not(:last-child)
+				margin-right: 10px
+
+		&-dots
+			text-align: center

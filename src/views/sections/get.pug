@@ -1,0 +1,40 @@
+-
+	var gets = [
+		{
+			icon: 'img/icon-get-1.svg',
+			content: 'Умный подход к бюджетированию и медиапланированию. Контроль и оптимизация расходов маркетинга'
+		},
+		{
+			icon: 'img/icon-get-2.svg',
+			content: 'Долгосрочную стратегию бизнеса, по которой Вы будете планомерно, из месяца в месяц, наращивать прибыль'
+		},
+		{
+			icon: 'img/icon-get-3.svg',
+			content: 'Идентификацию ваших клиентов, их сегментацию, выстраивание точек касания, сценарии работы с клиентами Вашего бизнеса'
+		},
+		{
+			icon: 'img/icon-get-4.svg',
+			content: 'Увеличение выручки в расчете на одного клиента'
+		},
+		{
+			icon: 'img/icon-get-5.svg',
+			content: 'Увеличите поток клиентов'
+		},
+		{
+			icon: 'img/icon-get-6.svg',
+			content: 'Грамотный подсчет показателей, внедрение необходимой аналитики'
+		}
+	];
+
++b.SECTION.get
+	.container
+		+e.H3.title.title-section._center
+			| Поработав с нами, Вы 
+			span.bold получите
+		.row
+			each get in gets
+				+b.icon._flex.col-12.col-sm-6.col-md-4
+					+e.header
+						+e.IMG.image(src=get.icon)
+					+e.content
+						p=get.content

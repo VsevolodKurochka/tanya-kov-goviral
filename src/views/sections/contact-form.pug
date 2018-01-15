@@ -1,0 +1,26 @@
++b.SECTION.contact-form
+	+e.container.container
+		+e.row.row
+			+e.column._text.col-12.col-sm-6
+				+e.content
+					+e.P.content-title Получите консультацию о проектах сообщества, заполнив форму справа
+					+e.info
+						+e.info-item._phone
+							a(href="#") +38 (068) 936-55-65
+						+e.info-item._map
+							p Киев, ул. Евгения Коновальца (Щорса), 44а, офис №12
+			+e.column._phone.col-12.col-sm-6
+				+e.phone
+					+e.IMG.phone-img(src="img/iphone.png")
+					+e.phone-body
+						+e.P.phone-body-title Заполните контактную форму
+						+b.FORM.vform._block
+							+e.content
+								+e.row
+									+e.INPUT.control(name="vname" type="text" placeholder="Имя")
+								+e.row
+									+e.INPUT.control(name="vemail" type="email" placeholder="E-mail")
+								+e.row
+									+e.INPUT.control(name="vphone" type="phone" placeholder="Номер телефона")
+								+e.row
+									+e.BUTTON.submit.vbtn._color-brand-1(type="submit") Отправить
