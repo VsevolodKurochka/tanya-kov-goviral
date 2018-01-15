@@ -1,6 +1,11 @@
 +b('working')
 	
 	+padding-y(45px)
+	
+	+e('row')
+		+min(md)
+			+max(lg)
+				justify-content: center
 
 	+e('item')
 		$self: &
@@ -280,3 +285,20 @@
 						top: 145px
 
 			@extend %working-size-4
+
+		+m('order')
+			@at-root
+				%change-order
+					+min(lg)
+						margin-left: -40px
+				%change-offset
+					+min(sm)
+						margin-top: -45px
+			&-1,
+			&-6
+				@extend %change-order
+
+			&-4,
+			&-5,
+			&-6
+				@extend %change-offset
