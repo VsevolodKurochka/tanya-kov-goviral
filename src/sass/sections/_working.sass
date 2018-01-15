@@ -6,17 +6,21 @@
 		$self: &
 
 		+ee('icon')
-			height: 75px
+			height: 70px
 
 			+min(md)
 				+absolute
 
 			+min(lg)
+				height: 80px
+
+			+min(xlg)
 				height: 100px
 
 		+ee('title')
 			font-weight: bold
-			
+			line-height: 1.1
+
 			+min(md)
 				+absolute
 
@@ -24,7 +28,7 @@
 				font-size: 30px
 
 			+min(xlg)
-				font-size: 36px
+				font-size: 33px
 
 		+ee('back')
 			display: flex
@@ -74,7 +78,7 @@
 					@extend %working-size-1-md
 					
 					.front, .back
-							@extend %working-size-1-md
+						@extend %working-size-1-md
 
 				// LG
 				+min(lg)
@@ -86,7 +90,7 @@
 					@extend %working-size-1-lg
 					
 					.front, .back
-							@extend %working-size-1-lg
+						@extend %working-size-1-lg
 				
 				// XLG
 				+min(xlg)
@@ -98,7 +102,7 @@
 					@extend %working-size-1-xlg
 					
 					.front, .back
-							@extend %working-size-1-xlg
+						@extend %working-size-1-xlg
 
 			%working-size-2
 				
@@ -112,19 +116,19 @@
 					@extend %working-size-2-md
 					
 					.front, .back
-							@extend %working-size-2-md
+						@extend %working-size-2-md
 
 				// LG
 				+min(lg)
 					
 					@at-root
 						%working-size-2-lg
-							+size(335px, 460px)
+							+size(290px, 405px)
 
 					@extend %working-size-2-lg
 					
 					.front, .back
-							@extend %working-size-2-lg
+						@extend %working-size-2-lg
 				
 				// XLG
 				+min(xlg)
@@ -136,7 +140,13 @@
 					@extend %working-size-2-xlg
 					
 					.front, .back
-							@extend %working-size-2-xlg
+						@extend %working-size-2-xlg
+
+			%working-size-3
+				@extend %working-size-1
+
+			%working-size-4
+				@extend %working-size-2
 		
 		// M 1
 		+m('1')
@@ -182,13 +192,91 @@
 					+ee('front')
 						+bg('../img/working__item-2.png')
 
+			+min(md)
+				#{$self}
+					+ee('icon')
+						right: 48px;
+						bottom: 90px;
+					+ee('title')
+						top: 160px
+						left: 70px
+
+			+min(lg)
+				#{$self}
+					+ee('icon')
+						right: 48px;
+						bottom: 90px;
+					+ee('title')
+						top: 160px
+						left: 70px
+
 			+min(xlg)
 				#{$self}
 					+ee('icon')
-						bottom: 25px
-						right: 30px
+						right: 48px;
+						bottom: 90px;
 					+ee('title')
-						top: 0
-						left: 0
+						top: 160px
+						left: 70px
 
 			@extend %working-size-2
+
+		// M 3
+		+m('3')
+			+min(md)
+				#{$self}
+					+ee('front')
+						+bg('../img/working__item-3.png')
+			
+			+min(md)
+				#{$self}
+					+ee('icon')
+						top: 25px
+						right: 60px
+					+ee('title')
+						left: 60px
+						bottom: 100px
+
+			+min(lg)
+				#{$self}
+					+ee('title')
+						left: 60px
+						bottom: 105px
+
+			+min(xlg)
+				#{$self}
+					+ee('title')
+						left: 60px
+						bottom: 130px
+
+			@extend %working-size-3
+
+		// M 4
+		+m('4')
+			+min(md)
+				#{$self}
+					+ee('front')
+						+bg('../img/working__item-2.png')
+
+			+min(md)
+				#{$self}
+					+ee('icon')
+						left: 50px;
+						top: 20px;
+					+ee('title')
+						top: 160px
+						left: 70px
+
+			+min(lg)
+				#{$self}
+					+ee('title')
+						top: 135px
+						left: 50px
+
+			+min(xlg)
+				#{$self}
+					+ee('title')
+						left: 50px
+						top: 145px
+
+			@extend %working-size-4
