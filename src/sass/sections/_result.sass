@@ -9,9 +9,12 @@
 
 		+min(sm)
 			min-height: 400px
+		
+		+min(md)
+			margin-left: 60px
 
 		+min(lg)
-			left: 75px
+			margin-left: 75px
 
 		+min(xlg)
 			margin-left: 100px
@@ -45,6 +48,9 @@
 		
 		@at-root
 			%size-type-1
+				+min(md)
+					+size(300px, 215px)
+
 				+min(lg)
 					+size(350px, 250px)
 
@@ -52,7 +58,10 @@
 					+size(450px, 320px)
 
 			%size-type-2
-	
+				
+				+min(md)
+					+size(220px, 320px)
+
 				+min(lg)
 					+size(270px, 380px)
 	
@@ -60,6 +69,9 @@
 					+size(320px, 450px)
 
 			%size-type-3
+				
+				+min(md)
+					+size(220px)
 
 				+min(lg)
 					+size(280px)
@@ -77,7 +89,6 @@
 			@extend %size-type-1
 
 			#{$self}__item-icon
-				top: 30px
 				left: 50%
 				transform: translateX(-50%)
 
@@ -95,6 +106,68 @@
 		+m('5')
 			+bg('../img/result__item-5.png')
 			@extend %size-type-1
+
+		// MD
+		+min(md)
+			
+			#{$self}__item-content
+				max-width: 150px
+				font-size: 12px
+
+			+m('1')
+				top: 0
+				left: 0
+				#{$self}__item-icon
+					top: 10px
+					left: 35px
+
+				#{$self}__item-content
+					right: 35px
+					bottom: 66px
+					
+			+m('2')
+				bottom: 101px
+				left: 168px
+				#{$self}__item-content
+					bottom: 65px
+					left: 50%
+					transform: translateX(-50%)
+				#{$self}__item-icon
+					top: 15px
+
+			+m('3')
+				top: -10px
+				left: 330px
+				#{$self}__item-content
+					top: 95px
+					left: 40px
+
+				#{$self}__item-icon
+					right: 28px
+					bottom: 60px
+
+			+m('4')
+				top: -92px
+				left: 420px
+				#{$self}__item-content
+					top: 90px
+					left: 35px
+
+				#{$self}__item-icon
+					top: 15px
+					right: 35px
+
+			+m('5')
+				top: -5px
+				left: 507px
+				#{$self}__item-content
+					top: 2px
+					right: 30px
+					text-align: left
+				#{$self}__item-icon
+					right: 120px
+					bottom: 60px
+
 
 		// LG
 		+min(lg)
@@ -122,6 +195,8 @@
 					bottom: 75px
 					left: 50%
 					transform: translateX(-50%)
+				#{$self}__item-icon
+					top: 30px
 
 			+m('3')
 				top: -15px
