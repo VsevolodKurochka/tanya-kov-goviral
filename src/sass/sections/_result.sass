@@ -1,8 +1,10 @@
 +b('result')
 	$self: &
+	
+	+padding-y(30px)
 
 	+min(sm)
-		padding-top: 45px
+		+padding-y(45px)
 
 	+e('row')
 		position: relative
@@ -28,12 +30,8 @@
 
 	+e('item')
 		+relative
-		
-		+min(sm)
-			+absolute
 
 		+ee('icon')
-			+absolute
 			height: 63px
 			padding: 7px
 			path
@@ -41,71 +39,86 @@
 				stroke: $color-brand-1
 
 		+ee('content')
-			+absolute
 			text-align: center
 			line-height: 1.1
 			font-size: 16px
 		
-		@at-root
-			%size-type-1
-				+min(md)
+		+max(md)
+			text-align: center
+			
+			&:not(:last-child)
+				margin-bottom: 30px
+
+			+ee('content')
+				max-width: 250px
+				+margin-x(auto)
+
+		+min(md)
+
+			+absolute
+
+			+ee('icon')
+				+absolute
+
+			+ee('content')
+				+absolute
+
+			@at-root
+				%size-type-1
+
 					+size(300px, 215px)
 
-				+min(lg)
-					+size(350px, 250px)
+					+min(lg)
+						+size(350px, 250px)
 
-				+min(xlg)
-					+size(450px, 320px)
+					+min(xlg)
+						+size(450px, 320px)
 
-			%size-type-2
-				
-				+min(md)
+				%size-type-2
+					
 					+size(220px, 320px)
 
-				+min(lg)
-					+size(270px, 380px)
-	
-				+min(xlg)
-					+size(320px, 450px)
+					+min(lg)
+						+size(270px, 380px)
+		
+					+min(xlg)
+						+size(320px, 450px)
 
-			%size-type-3
-				
-				+min(md)
+				%size-type-3
+					
 					+size(220px)
 
-				+min(lg)
-					+size(280px)
+					+min(lg)
+						+size(280px)
 
-				+min(xlg)
-					+size(384px)
+					+min(xlg)
+						+size(384px)
 
-		+m('1')
-			+bg('../img/result__item-1.png')
-			@extend %size-type-1
+			+m('1')
+				+bg('../img/result__item-1.png')
+				@extend %size-type-1
 
-		+m('2')
-			+bg('../img/result__item-2.png')
-			z-index: -1
-			@extend %size-type-1
+			+m('2')
+				+bg('../img/result__item-2.png')
+				z-index: -1
+				@extend %size-type-1
 
-			#{$self}__item-icon
-				left: 50%
-				transform: translateX(-50%)
+				#{$self}__item-icon
+					left: 50%
+					transform: translateX(-50%)
 
-		+m('3')
-			+bg('../img/result__item-3.png')
-			@extend %size-type-2
-			z-index: -2
+			+m('3')
+				+bg('../img/result__item-3.png')
+				@extend %size-type-2
+				z-index: -2
 
-		+m('4')
-			+bg('../img/result__item-4.png')
-			@extend %size-type-3
+			+m('4')
+				+bg('../img/result__item-4.png')
+				@extend %size-type-3
 
-			
-
-		+m('5')
-			+bg('../img/result__item-5.png')
-			@extend %size-type-1
+			+m('5')
+				+bg('../img/result__item-5.png')
+				@extend %size-type-1
 
 		// MD
 		+min(md)

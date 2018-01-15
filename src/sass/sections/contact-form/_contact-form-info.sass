@@ -1,21 +1,33 @@
 +b('contact-form')
+
+	+max(sm)
+
+		text-align: center
+
 	+e('info')
 
 		margin-bottom: 15px
 
+		+max(sm)
+			+margin-y(30px)
+
 		+ee('logo')
 			height: 55px
+			+max(sm)
+				margin-bottom: 15px
 
 		+ee('row')
 			+min(sm)
 				align-items: center
 
 		+ee('button')
+			display: inline-block
 			background-color: transparent
 			border: none
 			font-family: 'PT Sans', sans-serif
 			font-weight: bold
 			font-size: 15px
+			padding: 5px
 
 			&:not(:last-child)
 				margin-right: 15px
@@ -42,6 +54,9 @@
 				
 				&:not(:last-child)
 					margin-bottom: 15px
+			
+			+max(sm)
+				margin-bottom: 30px
 
 			+min(sm)
 

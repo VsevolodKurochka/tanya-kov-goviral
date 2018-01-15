@@ -2,16 +2,88 @@
 	+e('background-item')
 		+absolute
 		z-index: z('below')
+		display: none
+		
+		+m('1')
+			display: block
+			top: -25%
+			left: 0
+			max-width: 100px
+
+		+m('2')
+			display: block
+			top: 15%
+			left: -5%
+			max-width: 100px
+
+		+m('3')
+			top: -10%;
+			left: 50%;
+			display: block;
+			max-width: 125px;
+	
+		+min(sm)
+			max-width: 150px
+			display: block
+			+m('1')
+				top: -30%
+				left: -22%
+
+			+m('2')
+				top: 30%
+				left: -20%
+
+			+m('3')
+				top: 70%
+				left: -15%
+
+			+m('4')
+				top: -25%
+				left: 26%
+
+			+m('5')
+				top: 35%
+				left: 5%
+
+			+m('6')
+				top: 80%
+				left: 30%
+
+		+min(md)
+			max-width: 200px
+			+m('1')
+				top: -30%
+				left: -22%
+
+			+m('2')
+				top: 30%
+				left: -20%
+
+			+m('3')
+				top: 70%
+				left: -15%
+
+			+m('4')
+				top: -25%
+				left: 26%
+
+			+m('5')
+				top: 35%
+				left: 5%
+
+			+m('6')
+				top: 80%
+				left: 30%
 
 		+min(lg)
 			max-width: 250px
 			+m('1')
-				top: -30%;
-				left: -25%;
+				top: -30%
+				left: -25%
 
 			+m('2')
-				top: 30%;
-				left: -25%;
+				top: 30%
+				left: -25%
 
 			+m('3')
 				top: 70%

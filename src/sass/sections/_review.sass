@@ -39,7 +39,9 @@
 				top: 0
 				+size(45px)
 				+bg('../img/icon-review.svg')
-
+	
+			+max(sm)
+				font-size: 16px
 
 			+min(lg)
 				padding-top: 80px
@@ -54,6 +56,9 @@
 			box-shadow: -25px 15px 50px 0px rgba(12, 12, 15, .15)
 			margin-right: 1px
 
+			+ee('wrapper')
+				flex-basis: 90px
+
 		+ee('footer')
 			display: flex
 			align-items: center
@@ -63,13 +68,14 @@
 		+ee('info')
 			padding-right: 30px
 			text-align: right
-
+			flex-basis: 0
+			flex-grow: 1
+			font-size: 16px
 			+ee('name')
 				color: $color-brand-1
 				font-weight: bold
-				font-size: 20px
-				+min(md)
-					font-size: 24px
+				font-size: 125%
+				line-height: 1.2
 
 	.owl
 		&-item
