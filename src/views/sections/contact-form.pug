@@ -1,20 +1,29 @@
 +b.SECTION.contact-form
 	+e.container.container
+		+e.background(src="img/background-contact.png")
 		+e.row.row
 			+e.column._text.col-12.col-sm-6
 				+e.content
-					+e.P.content-title Получите консультацию о проектах сообщества, заполнив форму справа
-					+e.info
-						+e.info-item._phone
-							a(href="#") +38 (068) 936-55-65
-						+e.info-item._map
-							p Киев, ул. Евгения Коновальца (Щорса), 44а, офис №12
+					+e.P.content-title 
+						| Как думаете, 
+						span.bold сколько еще продержится Ваш бизнес, 
+						| если 
+						span.bold Вы продолжите использовать старые подходы 
+						| в маркетинге, продажах и клиент-сервисе?
+					p Не нужно проверять.
+					p
+						span.bold Оставьте заявку 
+						| и мы покажем, какой потенциал роста есть у Вашего бизнеса
 			+e.column._phone.col-12.col-sm-6
 				+e.phone
 					+e.IMG.phone-img(src="img/iphone.png")
 					+e.phone-body
-						+e.P.phone-body-title Заполните контактную форму
-						+b.FORM.vform._block
+						+e.P.phone-body-title 
+							|Заполните форму
+							br
+							|и 
+							span.bold мы Вам перезвоним
+						+b.FORM.form._block
 							+e.content
 								+e.row
 									+e.INPUT.control(name="vname" type="text" placeholder="Имя")
@@ -23,4 +32,4 @@
 								+e.row
 									+e.INPUT.control(name="vphone" type="phone" placeholder="Номер телефона")
 								+e.row
-									+e.BUTTON.submit.vbtn._color-brand-1(type="submit") Отправить
+									+e.BUTTON.submit.btn._brand-1.effect._bounce-top(type="submit") Отправить
