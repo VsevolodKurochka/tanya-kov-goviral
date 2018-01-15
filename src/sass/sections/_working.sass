@@ -1,2 +1,194 @@
 +b('working')
+	
 	+padding-y(45px)
+
+	+e('item')
+		$self: &
+
+		+ee('icon')
+			height: 75px
+
+			+min(md)
+				+absolute
+
+			+min(lg)
+				height: 100px
+
+		+ee('title')
+			font-weight: bold
+			
+			+min(md)
+				+absolute
+
+			+min(lg)
+				font-size: 30px
+
+			+min(xlg)
+				font-size: 36px
+
+		+ee('back')
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 15px
+			background-color: $color-white
+			border: 1px solid #ddd
+			box-shadow: 0px 44px 50px 0px rgba(12, 12, 15, 0.15);
+			font-size: 15px
+
+			+min(md)
+				padding: 30px
+
+			+min(lg)
+				font-size: 17px
+
+		+ee('front')
+
+			+max(md)
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: $color-white
+				border: 1px solid #ddd
+				box-shadow: 0px 44px 50px 0px rgba(12, 12, 15, 0.15);
+	
+		@at-root
+			%working-size
+				+size(270px, 200px)
+
+		@extend %working-size
+		
+		.front, .back
+			@extend %working-size
+
+		@at-root
+			%working-size-1
+				
+				// MD
+				+min(md)
+					
+					@at-root
+						%working-size-1-md
+							+size(400px, 290px)
+
+					@extend %working-size-1-md
+					
+					.front, .back
+							@extend %working-size-1-md
+
+				// LG
+				+min(lg)
+					
+					@at-root
+						%working-size-1-lg
+							+size(460px, 335px)
+
+					@extend %working-size-1-lg
+					
+					.front, .back
+							@extend %working-size-1-lg
+				
+				// XLG
+				+min(xlg)
+					
+					@at-root
+						%working-size-1-xlg
+							+size(534px, 387px)
+
+					@extend %working-size-1-xlg
+					
+					.front, .back
+							@extend %working-size-1-xlg
+
+			%working-size-2
+				
+				// MD
+				+min(md)
+					
+					@at-root
+						%working-size-2-md
+							+size(290px, 400px)
+
+					@extend %working-size-2-md
+					
+					.front, .back
+							@extend %working-size-2-md
+
+				// LG
+				+min(lg)
+					
+					@at-root
+						%working-size-2-lg
+							+size(335px, 460px)
+
+					@extend %working-size-2-lg
+					
+					.front, .back
+							@extend %working-size-2-lg
+				
+				// XLG
+				+min(xlg)
+					
+					@at-root
+						%working-size-2-xlg
+							+size(325px, 455px)
+
+					@extend %working-size-2-xlg
+					
+					.front, .back
+							@extend %working-size-2-xlg
+		
+		// M 1
+		+m('1')
+			+min(md)
+				#{$self}
+					+ee('front')
+						+bg('../img/working__item-1.png')
+
+			
+			+min(md)
+				#{$self}
+					+ee('icon')
+						top: 15px
+						left: 60px
+					+ee('title')
+						right: 75px
+						bottom: 107px
+
+			+min(lg)
+				#{$self}
+					+ee('icon')
+						top: 15px
+						left: 60px
+					+ee('title')
+						right: 60px
+						bottom: 115px
+
+			+min(xlg)
+				#{$self}
+					+ee('icon')
+						top: 25px
+						left: 60px
+					+ee('title')
+						right: 60px
+						bottom: 130px
+
+			@extend %working-size-1
+	
+		// M 2
+		+m('2')
+			+min(md)
+				#{$self}
+					+ee('front')
+						+bg('../img/working__item-2.png')
+
+			+min(xlg)
+				#{$self}
+					+ee('icon')
+						bottom: 25px
+						right: 30px
+					+ee('title')
+						top: 0
+						left: 0
+
+			@extend %working-size-2
