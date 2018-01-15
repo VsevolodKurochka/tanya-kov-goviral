@@ -3,12 +3,13 @@
 	+padding-y(45px)
 	
 	+e('row')
-		+min(md)
-			+max(lg)
-				justify-content: center
+		justify-content: center
 
 	+e('item')
 		$self: &
+
+		+max(md)
+			margin-bottom: 15px
 
 		+ee('icon')
 			height: 70px
@@ -292,7 +293,7 @@
 					+min(lg)
 						margin-left: -40px
 				%change-offset
-					+min(sm)
+					+min(lg)
 						margin-top: -45px
 			&-1,
 			&-6
