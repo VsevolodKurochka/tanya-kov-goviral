@@ -140,6 +140,10 @@ class Modal {
 
 		new WOW().init();
 
+		const scroll = new SmoothScroll('a[href*="#"]', {
+			offset: 70
+		});
+
 		const themePrefix = '';
 
 		// Anchors links
