@@ -148,6 +148,19 @@ class Modal {
 			}
 		}).init();
 
+		const checkResultAnimatedItems = () => {
+			if(document.getElementsByClassName('result__item_animated').length == 5){
+				addClass(document.getElementById('js-result-attention'), 'result__attention_active');
+				clearInterval(checkResultInterval);
+			}
+		}
+
+		checkResultAnimatedItems();
+
+		const checkResultInterval = setInterval(checkResultAnimatedItems, 500);
+
+		//clearInterval();
+
 		const scroll = new SmoothScroll('a[href*="#"]', {
 			offset: 70
 		});
