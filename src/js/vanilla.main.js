@@ -135,7 +135,10 @@ class Modal {
 
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
+		
 		new Modal();
+
+		new WOW().init();
 
 		const themePrefix = '';
 
