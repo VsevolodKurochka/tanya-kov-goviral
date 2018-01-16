@@ -9,9 +9,48 @@
 	+e('item')
 		
 		$item: &
+		
+		+relative
+		
+		+min(sm)
+			&:not(:nth-child(3)):not(:nth-child(6))
+				&:before
+					content: ""
+					+absolute(45px, null, null, 15px)
+					+size(100%, 1px)
+					border-bottom: 4px dashed #ddd
+
+			&:nth-child(1),
+			&:nth-child(2)
+				&:after
+					content: ""
+					+absolute(155px, null, null, 60px)
+					+size(100%, 1px)
+					border-bottom: 4px dashed #ddd
+			
+			&:nth-child(3),
+			&:nth-child(4)
+				&:after
+					content: ""
+					+size(1px, 150px)
+					border-left: 4px dashed #ddd
+					z-index: -1
+
+			&:nth-child(3)
+				&:after
+					+absolute(9px, null, null, 60px)
+
+			&:nth-child(4)
+				&:after
+					+absolute(-55px, null, null, 60px)
+					
 
 		+ee('inner')
 			position: relative
+
+			+min(sm)
+				margin-bottom: 60px
+				padding-bottom: 60px
 
 		+ee('front')
 			display: flex
