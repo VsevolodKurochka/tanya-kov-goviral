@@ -11,10 +11,43 @@
 		+absolute(0, 0, null, null)
 
 	+e('attention')
-		+absolute(45%, null, null, 50%)
+		+absolute(30%, null, null, 50%)
 		transform: translate(-50%, -50%)
-		padding: 45px
+		padding: 15px
 		background-color: $color-white
+		z-index: 2
+		border: 10px solid $color-brand-1
+		border-radius: 6px
+		opacity: 0
+		visibility: hidden
+		+transition
+
+		+m('active')
+			opacity: 1
+			visibility: visible
+
+		+min(md)
+			padding: 30px
+		
+		+ee('icon')
+			display: inline-block
+			vertical-align: middle
+			margin-right: 15px
+			+size(70px)
+			
+		+ee('title')
+			display: inline-block
+			vertical-align: middle
+			font-size: 20px
+
+			+min(md)
+				font-size: 35px
+
+			+min(lg)
+				font-size: 40px
+
+			+min(xlg)
+				font-size: 48px
 
 	+e('row')
 		position: relative

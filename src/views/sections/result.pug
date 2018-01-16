@@ -6,7 +6,10 @@
 			span.bold приводит?
 		+e.row
 			+e.attention#js-result-attention
-				p Провал
+				+e.IMG.attention-icon(src="img/result-attention.svg")
+				+e.P.attention-title
+					| Проект 
+					span.color-brand-1.bold провален
 			+e.item._1.wow.fadeInLeftBig(data-wow-delay="0.1s")
 				+resultIcon()
 				+e.item-content

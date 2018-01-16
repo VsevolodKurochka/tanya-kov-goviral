@@ -150,7 +150,9 @@ class Modal {
 
 		const checkResultAnimatedItems = () => {
 			if(document.getElementsByClassName('result__item_animated').length == 5){
-				addClass(document.getElementById('js-result-attention'), 'result__attention_active');
+				setTimeout(() => {
+					addClass(document.getElementById('js-result-attention'), 'result__attention_active');
+				}, 5000);
 				clearInterval(checkResultInterval);
 			}
 		}
