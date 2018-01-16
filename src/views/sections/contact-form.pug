@@ -2,7 +2,7 @@
 	+e.container.container
 		+e.background(src="img/background-contact.png")
 		+e.row.row
-			+e.column._text.col-12.col-sm-6
+			+e.column._text.col-12.col-sm-6.wow.fadeInUpBig(data-wow-delay="0.1s")
 				+e.content
 					+e.P.content-title 
 						| Как думаете, 
@@ -14,7 +14,7 @@
 					p
 						span.bold Оставьте заявку 
 						| и мы покажем, какой потенциал роста есть у Вашего бизнеса
-			+e.column._phone.col-12.col-sm-6
+			+e.column._phone.col-12.col-sm-6.wow.fadeInUpBig(data-wow-delay="0.3s")
 				+e.phone
 					+e.IMG.phone-img(src="img/iphone.png")
 					+e.phone-body
@@ -23,16 +23,19 @@
 							br
 							|и 
 							span.bold мы Вам перезвоним
-						+b.FORM.form._block
+						+b.FORM.form._block(action="mail.php" method="POST")
 							+e.content
 								+e.row
-									+e.INPUT.control(name="vname" type="text" placeholder="Имя")
+									+e.INPUT.control(name="vname" type="text")
+									+e.label Ваше имя
 								+e.row
-									+e.INPUT.control(name="vemail" type="email" placeholder="E-mail")
+									+e.INPUT.control(name="vemail" type="email")
+									+e.label Ваш email
 								+e.row
-									+e.INPUT.control(name="vphone" type="phone" placeholder="Номер телефона")
+									+e.INPUT.control(name="vphone" type="tel")
+									+e.label Ваш телефон
 								+e.row
-									+e.BUTTON.submit.btn._brand-1.effect._bounce-top(type="submit") Отправить
+									+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
 	+e.info
 		+e.container.container
 			+e.row.row
