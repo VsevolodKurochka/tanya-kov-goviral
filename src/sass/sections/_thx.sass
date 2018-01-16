@@ -1,0 +1,50 @@
++b('thx')
+	display: flex
+	align-items: center
+	height: 100vh
+
+	+e('background')
+		+absolute(null, 0, 0, null)
+	
+	@at-root
+		%thx-text
+			line-height: 1.1
+			margin-bottom: 15px
+			+min(sm)
+				margin-bottom: 30px
+
+
+	+e('title')
+		font-weight: bold
+		font-size: 30px
+
+		@extend %thx-text
+
+		+min(sm)
+			font-size: 48px
+
+	+e('subtitle')
+		font-weight: normal
+		font-size: 20px
+
+		@extend %thx-text
+
+		+min(sm)
+			font-size: 30px
+
+	+e('footer')
+		
+		margin-top: 30px
+
+		+min(sm)
+
+			margin-top: 45px
+
+
+		+ee('title')
+
+			margin-bottom: 15px;
+			font-size: 20px
+
+			+min(sm)
+				font-size: 30px
