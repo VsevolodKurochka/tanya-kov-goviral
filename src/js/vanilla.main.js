@@ -138,7 +138,15 @@ class Modal {
 		
 		new Modal();
 
-		new WOW().init();
+		new WOW({
+			callback: function(box){
+				if( hasClass(box, 'result__item') ){
+					setTimeout(function(){
+						addClass(box, 'result__item_animated');
+					}, 1500);
+				}
+			}
+		}).init();
 
 		const scroll = new SmoothScroll('a[href*="#"]', {
 			offset: 70

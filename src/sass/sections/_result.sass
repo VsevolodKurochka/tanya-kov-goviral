@@ -33,20 +33,37 @@
 			padding-left: 50px
 
 	+e('item')
+		$item: &
 		+relative
 
 		+ee('icon')
 			height: 63px
 			padding: 7px
+			+transition
 			path
-				fill: none
+				fill: #fff
 				stroke: $color-brand-1
+				+transition
+
+		@for $i from 1 through 5
+			+m($i)
+				#{$item}
+					+ee('icon')
+						path
+							transition-delay: $i + s
 
 		+ee('content')
 			text-align: center
 			line-height: 1.1
 			font-size: 16px
 		
+		+m('animated')
+			#{$item}
+				+ee('icon')
+					path
+						fill: $color-brand-1
+
+
 		+max(md)
 			text-align: center
 			
