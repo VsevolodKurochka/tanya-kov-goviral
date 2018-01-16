@@ -4,6 +4,7 @@
 	width: 100%
 
 	&__row
+		+relative
 		#{$self}_block &
 			+rowOffset
 
@@ -69,3 +70,17 @@
 
 				+placeholder
 					color: transparent
+
+		&__label
+			+absolute(50%, null, null, 15px)
+			transform: translateY(-50%)
+			padding: 2px 5px;
+			pointer-events: none
+			transition: all ease 0.2s
+			line-height: 1
+
+		&__control:focus + &__label
+			top: -10px
+			transform: none
+			background-color: #fff;
+			color: $color-brand-1

@@ -1,4 +1,4 @@
-$themeFormDesign: "new"
+$themeFormDesign: "old"
 
 =input-default
 	display: block
@@ -17,7 +17,5 @@ $themeFormDesign: "new"
 		+transition
 
 =rowOffset
-	margin-bottom: 15px
-
-	&:last-child
-		margin-bottom: 0
+	&:not(:last-child)
+		margin-bottom: 20px

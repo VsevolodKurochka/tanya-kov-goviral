@@ -7,11 +7,14 @@
 			+b.FORM.form._block(action="mail.php" method="POST")
 				+e.content
 					+e.row
-						+e.INPUT.control(name="vname" type="text" placeholder="Ваше имя")
+						+e.INPUT.control(name="vname" type="text")
+						+e.label Ваше имя
 					+e.row
-						+e.INPUT.control(name="vemail" type="email" placeholder="Ваш email")
+						+e.INPUT.control(name="vemail" type="email")
+						+e.label Ваш email
 					+e.row
-						+e.INPUT.control(name="vphone" type="tel" placeholder="Ваш телефон")
+						+e.INPUT.control(name="vphone" type="tel")
+						+e.label Ваш телефон
 					+e.row
 						+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
 
