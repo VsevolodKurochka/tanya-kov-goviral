@@ -94,41 +94,49 @@ class Modal {
 	}
 
 	_showButtonClick(e) {
-		// Get button data-attributes
-		var modalData = e.target.dataset;
-
-		// Get attribute data-open and replace # with empty line
-		var modalID = modalData.open.replace("#", "");
 		
-		
-		if( exists(document.getElementById(modalID) ) ){
+		// console.log(e.target.parentNode);
 
-			let modalCurrent = document.getElementById(modalID);
+		while(e.target.parentNode != document.querySelector(`[data-action='modal']`)){
 
-			this.modalOpen(modalCurrent);
+			// Get button data-attributes
+			var modalData = e.target.dataset;
 
-			if(modalData.video != undefined){
-				
+			log(e.target.parentNode == document.querySelector(`[data-action='modal']`));
+			
+			// Get attribute data-open and replace # with empty line
+			var modalID = modalData.open.replace("#", "");
+			
+			
+			if( exists(document.getElementById(modalID) ) ){
 
-				if( exists(modalCurrent.getElementsByClassName('modal__video')[0]) ){
+				let modalCurrent = document.getElementById(modalID);
 
-					this._removeIframe(modalCurrent);
+				this.modalOpen(modalCurrent);
 
-					let videoIframe = document.createElement('iframe');
+				if(modalData.video != undefined){
+					
 
-					addClass(videoIframe, 'modal__video-iframe');
+					if( exists(modalCurrent.getElementsByClassName('modal__video')[0]) ){
 
-					let videoSRC = modalData.video;
-					videoIframe.setAttribute('src', videoSRC);
-					videoIframe.setAttribute('allow', 'autoplay; encrypted-media');
-					videoIframe.setAttribute('allowfullscreen', 'allowfullscreen');
+						this._removeIframe(modalCurrent);
 
-					videoWrapper.appendChild(videoIframe);
+						let videoIframe = document.createElement('iframe');
+
+						addClass(videoIframe, 'modal__video-iframe');
+
+						let videoSRC = modalData.video;
+						videoIframe.setAttribute('src', videoSRC);
+						videoIframe.setAttribute('allow', 'autoplay; encrypted-media');
+						videoIframe.setAttribute('allowfullscreen', 'allowfullscreen');
+
+						videoWrapper.appendChild(videoIframe);
+					}
 				}
-			}
 
-		}else{
-			console.error('No element with ID: ' + modalID);
+			}else{
+				console.error('No element with ID: ' + modalID);
+			}
 		}
 	}
 
