@@ -49,6 +49,16 @@ mixin hamburger(type)
 				span
 				span
 
+mixin icon(classname, img, title)
+	+b.icon(class=classname)&attributes(attributes)
+		+e.inner
+			+e.header
+				+e.image(src=img)
+				if title
+					+e.P.title=title
+			+e.body
+				block
+
 mixin social(mod)
 	+b.UL.social(class=mod)
 		+e.LI.item

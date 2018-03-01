@@ -15,10 +15,37 @@
 	+e('header')
 		line-height: 1
 
+	+e("title")
+		font-weight: bold
+		font-size: 18px
+		line-height: 1.1
+		color: $color-brand-1
+
+		+min(md)
+			font-size: 24px
+
 	+m('flex')
 		+min(sm)
 			display: flex
 			align-items: center
+
+
+	&_center
+		text-align: center
+		margin-bottom: 30px
+
+	&_center &
+		+e("header")
+			margin-bottom: 15px
+
+
+		+e("image")
+			height: 100px
+
+
+		+e("title")
+			margin-top: 15px
+			margin-bottom: 15px
 
 	&_flex &
 		+min(sm)

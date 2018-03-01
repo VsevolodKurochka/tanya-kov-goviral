@@ -27,7 +27,7 @@
 			visibility: visible
 
 		+min(md)
-			padding: 20px
+			padding: 30px
 		
 		+ee('icon')
 			display: inline-block
@@ -55,7 +55,7 @@
 			font-size: 35px
 			padding: 0 8px 5px;
 			color: $color-white
-			background-color: #1DA616
+			background-color: $color-brand-1
 			border: none
 			border-radius: 4px
 			outline: none
@@ -63,7 +63,7 @@
 			+transition
 
 			&:hover
-				background-color: $color-brand-1
+				background-color: darken($color-brand-1, 15%)
 
 	+e('row')
 		position: relative
@@ -80,6 +80,9 @@
 		// +min(xlg)
 		// 	margin-left: 100px
 		// 	min-height: 600px
+
+	+e('footer')
+		text-align: center
 
 	+e('title')
 		margin-bottom: 45px
