@@ -36,26 +36,50 @@ class Modal {
 		this.modals = document.querySelectorAll(`.${this.name}`);
 
 		// Open Buttons
-		this.buttons = document.querySelectorAll(`[data-action="${this.name}"]`);
+		this.openButtons = document.querySelectorAll(`[data-action="${this.name}"]`);
 
 		// Close Button(`x`)
 		this.closeButtons = document.querySelectorAll(`[data-close="${this.name}"]`);
 
-		this.buttons.forEach( (button) => {
-			button.addEventListener('click', (e) => this._showButtonClick(e, this));
-		});
+		this.modalClickEvents = ['click'];
 
-		this.closeButtons.forEach( (button) => {
-			button.addEventListener('click', (e) => this._closeButtonClick(e, this));
-		});
+		//log(this.openButtons);
+		// this.openButtons.forEach( (openButton) => {
+		// 	log(openButton);
+		// 	//openButton.addEventListener('click', (e) => this._showButtonClick(e, this));
+		// });
 
-		this.bodyEvents = ['click', 'touchstart'];
-
-		this.bodyEvents.forEach( (bodyEvent) => {
-			document.body.addEventListener(bodyEvent, (e) => {
-				this._bodyClick(e, this);
+		for(let i = 0; i < this.openButtons.length; i++){
+			this.openButtons[i].addEventListener('click', (e) => {
+				this._showButtonClick(e);
 			});
+		}
+
+		for(let i = 0; i < this.closeButtons.length; i++){
+			this.closeButtons[i].addEventListener('click', (e) => {
+				this._closeButtonClick(e);
+			});
+		}
+
+		document.body.addEventListener('click', (e) => {
+			this._bodyClick(e);
 		});
+
+		//console.log(this.openButtons.length);
+
+		// this.modalClickEvents.forEach( (modalClickEvent) => {
+
+		// 	// document.body.addEventListener(modalClickEvent, (e) => {
+		// 	// 	this._bodyClick(e, this);
+		// 	// });
+
+			
+
+		// 	// this.closeButtons.forEach( (button) => {
+		// 	// 	button.addEventListener(modalClickEvent, (e) => this._closeButtonClick(e, this));
+		// 	// });
+
+		// });
 	}
 
 
@@ -83,26 +107,44 @@ class Modal {
 
 			this.modalOpen(modalCurrent);
 
-			// if(modalData.video != undefined){
-			// 	let videoSRC = modalData.video;
-			// 	let videoWrapper = modalCurrent.getElementsByClassName('v-modal__video')[0];
+			if(modalData.video != undefined){
+				
 
-			// 	videoWrapper.innerHTML = '';
+				if( exists(modalCurrent.getElementsByClassName('modal__video')[0]) ){
 
-			// 	let videoIframe = document.createElement('iframe');
+					this._removeIframe(modalCurrent);
 
-			// 	addClass(videoIframe, 'v-modal__iframe');
-			// 	videoIframe.setAttribute('src', videoSRC);
-			// 	videoWrapper.appendChild(videoIframe);
-			// }
+					let videoIframe = document.createElement('iframe');
+
+					addClass(videoIframe, 'modal__video-iframe');
+
+					let videoSRC = modalData.video;
+					videoIframe.setAttribute('src', videoSRC);
+					videoIframe.setAttribute('allow', 'autoplay; encrypted-media');
+					videoIframe.setAttribute('allowfullscreen', 'allowfullscreen');
+
+					videoWrapper.appendChild(videoIframe);
+				}
+			}
 
 		}else{
 			console.error('No element with ID: ' + modalID);
 		}
 	}
 
+	_removeIframe(element){
+		if( exists(element.getElementsByClassName('modal__video')[0]) ){
+			let _videoWrapper = element.getElementsByClassName('modal__video')[0];
+			_videoWrapper.innerHTML = '';
+		}
+	}
+
 	_closeButtonClick(e) {
-		this.modalClose( e.target.closest(`.${this.name}`) );
+
+		let modalCurrent = e.target.closest(`.${this.name}`);
+		this.modalClose( modalCurrent );
+
+		this._removeIframe(modalCurrent);
 	}
 
 	_getEventTarget(e){
@@ -125,11 +167,15 @@ class Modal {
 		let target = this._getEventTarget(e);
 
 		//log(target);
-		this.modals.forEach( (modal) => {
-			if(target == modal){
-				this.modalClose(modal);
+		for(let i = 0; i < this.modals.length; i++){
+
+			let targetModal = this.modals[i];
+
+			if(target == targetModal){
+				this.modalClose(targetModal);
+				this._removeIframe(targetModal);
 			}
-		});
+		}
 	}
 }
 
@@ -169,6 +215,16 @@ class Modal {
 		document.getElementById('js-result-attention-close').addEventListener('click', () => {
 			resultAttentionButtonClick();
 		} );
+
+
+		const collectInputs = document.getElementsByClassName('form__control');
+
+		for(let i = 0; i < collectInputs.length; i++){
+			collectInputs[i].addEventListener('click', function(){
+				addClass(this.parentNode, 'clicked');
+			});
+		}
+
 
 		//clearInterval();
 
