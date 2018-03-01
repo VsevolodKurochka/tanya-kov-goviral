@@ -2,14 +2,16 @@
 	+e.background(src='img/background-cooperation.png')
 	.container
 		+e.H3.title.title-section
-			| К чему это 
-			span.bold приводит?
+			| Но как это сделать
+			br
+			span.bold вы не знаете…
 		+e.row
 			+e.attention#js-result-attention
+				+e.BUTTON.attention-close#js-result-attention-close &times;
 				+e.IMG.attention-icon(src="img/result-attention.svg")
 				+e.P.attention-title
-					| Проект 
-					span.color-brand-1.bold провален
+					| Результатов 
+					span.color-brand-1.bold нет
 			+e.item._1.wow.fadeInLeftBig(data-wow-delay="0.1s")
 				+resultIcon()
 				+e.item-content

@@ -46,8 +46,24 @@
 			+min(lg)
 				font-size: 40px
 
-			+min(xlg)
-				font-size: 48px
+			// +min(xlg)
+			// 	font-size: 48px
+
+		+ee('close')
+			+absolute(-20px, -20px)
+			+size(40px)
+			font-weight: bold
+			font-size: 35px
+			color: $color-white
+			background-color: #1DA616
+			border: none
+			border-radius: 4px
+			outline: none
+
+			+transition
+
+			&:hover
+				background-color: $color-brand-1
 
 	+e('row')
 		position: relative
@@ -61,9 +77,9 @@
 		+min(lg)
 			margin-left: 75px
 
-		+min(xlg)
-			margin-left: 100px
-			min-height: 600px
+		// +min(xlg)
+		// 	margin-left: 100px
+		// 	min-height: 600px
 
 	+e('title')
 		margin-bottom: 45px
@@ -131,8 +147,8 @@
 					+min(lg)
 						+size(350px, 250px)
 
-					+min(xlg)
-						+size(450px, 320px)
+					// +min(xlg)
+					// 	+size(450px, 320px)
 
 				%size-type-2
 					
@@ -141,8 +157,8 @@
 					+min(lg)
 						+size(270px, 380px)
 		
-					+min(xlg)
-						+size(320px, 450px)
+					// +min(xlg)
+					// 	+size(320px, 450px)
 
 				%size-type-3
 					
@@ -151,8 +167,8 @@
 					+min(lg)
 						+size(280px)
 
-					+min(xlg)
-						+size(384px)
+					// +min(xlg)
+					// 	+size(384px)
 
 			+m('1')
 				+bg('../img/result__item-1.png')
@@ -304,51 +320,51 @@
 					bottom: 70px
 
 		// XLG
-		+min(xlg)
+		// +min(xlg)
 			
-			#{$self}__item-content
-				max-width: 230px
-				font-size: 16px
+		// 	#{$self}__item-content
+		// 		max-width: 230px
+		// 		font-size: 16px
 
-			+m('1')
-				#{$self}__item-content
-					bottom: 90px
-					right: 45px
+		// 	+m('1')
+		// 		#{$self}__item-content
+		// 			bottom: 90px
+		// 			right: 45px
 					
-			+m('2')
-				bottom: 155px
-				left: 250px
-				#{$self}__item-content
-					bottom: 90px
-					left: 50%
-					transform: translateX(-50%)
+		// 	+m('2')
+		// 		bottom: 155px
+		// 		left: 250px
+		// 		#{$self}__item-content
+		// 			bottom: 90px
+		// 			left: 50%
+		// 			transform: translateX(-50%)
 
-			+m('3')
-				top: 0
-				left: 500px
-				#{$self}__item-content
-					top: 140px
-					left: 45px
+		// 	+m('3')
+		// 		top: 0
+		// 		left: 500px
+		// 		#{$self}__item-content
+		// 			top: 140px
+		// 			left: 45px
 
-				#{$self}__item-icon
-					right: 65px
-					bottom: 90px
+		// 		#{$self}__item-icon
+		// 			right: 65px
+		// 			bottom: 90px
 
-			+m('4')
-				top: -170px
-				left: 615px
-				#{$self}__item-content
-					top: 175px
-					left: 96px
-					font-size: 15px
-					max-width: 190px
+		// 	+m('4')
+		// 		top: -170px
+		// 		left: 615px
+		// 		#{$self}__item-content
+		// 			top: 175px
+		// 			left: 96px
+		// 			font-size: 15px
+		// 			max-width: 190px
 
-			+m('5')
-				top: 3px
-				left: 745px
-				#{$self}__item-content
-					top: 25px
-					right: 55px
-				#{$self}__item-icon
-					right: 190px
-					bottom: 90px
+		// 	+m('5')
+		// 		top: 3px
+		// 		left: 745px
+		// 		#{$self}__item-content
+		// 			top: 25px
+		// 			right: 55px
+		// 		#{$self}__item-icon
+		// 			right: 190px
+		// 			bottom: 90px

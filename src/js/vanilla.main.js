@@ -161,6 +161,15 @@ class Modal {
 
 		const checkResultInterval = setInterval(checkResultAnimatedItems, 500);
 
+
+		const resultAttentionButtonClick = () => {
+			removeClass(document.getElementById('js-result-attention'), 'result__attention_active');
+		}
+
+		document.getElementById('js-result-attention-close').addEventListener('click', () => {
+			resultAttentionButtonClick();
+		} );
+
 		//clearInterval();
 
 		const scroll = new SmoothScroll('a[href*="#"]', {
