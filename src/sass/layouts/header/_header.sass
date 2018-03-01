@@ -1,15 +1,42 @@
 +b('header')
 	position: relative
 	z-index: z("default")
-	display: flex
-	height: 100vh
-	align-items: center
+	
+	+min(sm)
+		display: flex
+		height: 100vh
 
 	+e('part')
 		+relative
-		display: flex
-		flex-basis: 50%
-		justify-content: center
+		
+
+		+min(sm)
+			flex-basis: 50%
+			justify-content: center
+			display: flex
+			align-items: center
+			height: 100vh
 
 		+m('1')
 			+bg('../img/header-items.png')
+
+		+m('2')
+			+bg('../img/header-part-2.png')
+			color: $color-white
+
+	+e('logo')
+		line-height: 1
+		color: $color-brand-1
+		font-weight: bold
+
+		+min(md)
+			font-size: 100px
+
+	+e('intro')
+		font-weight: 100
+		max-width: 500px
+		+min(sm)
+			margin-top: 30px
+			font-size: 22px
+		+min(md)
+			font-size: 23px
