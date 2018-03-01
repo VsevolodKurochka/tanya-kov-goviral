@@ -36,13 +36,13 @@ mixin menu-item(isLink,href, name)
 
 mixin hamburger(type)
 	if type == '1'
-		+b.hamburger._effect-1(type="button" id="js-vnav__btn")
+		+b.hamburger._effect-1(data-action="modal" data-open="#modal-nav")
 			+e.SPAN.lines
 				span Line1
 				span Line2
 				span Line3
 	else if type == '2'
-		+b.hamburger._effect-2(type="button" id="js-vnav__btn")
+		+b.hamburger._effect-2(data-action="modal" data-open="#modal-nav")
 			+e.SPAN.lines
 				span
 				span

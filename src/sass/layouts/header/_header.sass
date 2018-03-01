@@ -9,6 +9,8 @@
 	+e('part')
 		+relative
 		
+		+max(sm)
+			padding: 45px 15px
 
 		+min(sm)
 			flex-basis: 50%
@@ -29,8 +31,23 @@
 		color: $color-brand-1
 		font-weight: bold
 
+		font-size: 75px
+
 		+min(md)
 			font-size: 100px
+
+		+min(lg)
+			font-size: 130px
+
+	+e('subtitle')
+		font-size: 20px
+		line-height: 1
+
+		+min(md)
+			font-size: 25px
+
+		+min(lg)
+			font-size: 30px
 
 	+e('intro')
 		font-weight: 100
