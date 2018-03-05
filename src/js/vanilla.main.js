@@ -97,47 +97,51 @@ class Modal {
 		
 		// console.log(e.target.parentNode);
 
-		while(e.target.parentNode != document.querySelector(`[data-action='modal']`)){
+		let target = e.target;
 
-			// Get button data-attributes
-			var modalData = e.target.dataset;
+		let targetButton = target.closest(`[data-action='modal']`);
 
-			log(e.target.parentNode == document.querySelector(`[data-action='modal']`));
-			
-			// Get attribute data-open and replace # with empty line
-			var modalID = modalData.open.replace("#", "");
-			
-			
-			if( exists(document.getElementById(modalID) ) ){
+		log(targetButton);
 
-				let modalCurrent = document.getElementById(modalID);
+		// if(!targetButton) return;
 
-				this.modalOpen(modalCurrent);
+		// // Get button data-attributes
+		var modalData = targetButton.dataset;
+		
+		// Get attribute data-open and replace # with empty line
+		var modalID = modalData.open.replace("#", "");
+		
+		
+		if( exists(document.getElementById(modalID) ) ){
 
-				if(modalData.video != undefined){
-					
+			let modalCurrent = document.getElementById(modalID);
 
-					if( exists(modalCurrent.getElementsByClassName('modal__video')[0]) ){
+			this.modalOpen(modalCurrent);
 
-						this._removeIframe(modalCurrent);
+			if(modalData.video != undefined){
+				
 
-						let videoIframe = document.createElement('iframe');
+				if( exists(modalCurrent.getElementsByClassName('modal__video')[0]) ){
 
-						addClass(videoIframe, 'modal__video-iframe');
+					this._removeIframe(modalCurrent);
 
-						let videoSRC = modalData.video;
-						videoIframe.setAttribute('src', videoSRC);
-						videoIframe.setAttribute('allow', 'autoplay; encrypted-media');
-						videoIframe.setAttribute('allowfullscreen', 'allowfullscreen');
+					let videoIframe = document.createElement('iframe');
 
-						videoWrapper.appendChild(videoIframe);
-					}
+					addClass(videoIframe, 'modal__video-iframe');
+
+					let videoSRC = modalData.video;
+					videoIframe.setAttribute('src', videoSRC);
+					videoIframe.setAttribute('allow', 'autoplay; encrypted-media');
+					videoIframe.setAttribute('allowfullscreen', 'allowfullscreen');
+
+					videoWrapper.appendChild(videoIframe);
 				}
-
-			}else{
-				console.error('No element with ID: ' + modalID);
 			}
+
+		}else{
+			console.error('No element with ID: ' + modalID);
 		}
+		
 	}
 
 	_removeIframe(element){
