@@ -94,16 +94,10 @@ class Modal {
 	}
 
 	_showButtonClick(e) {
-		
-		// console.log(e.target.parentNode);
 
 		let target = e.target;
 
 		let targetButton = target.closest(`[data-action='modal']`);
-
-		log(targetButton);
-
-		// if(!targetButton) return;
 
 		// // Get button data-attributes
 		var modalData = targetButton.dataset;
