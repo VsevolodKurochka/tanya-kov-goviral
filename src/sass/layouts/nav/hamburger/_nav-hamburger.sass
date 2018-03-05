@@ -59,5 +59,8 @@ $hamburger-line-radius: 4px
 
 		@extend %hamburger-format
 
-	+min(md)
-		display: none
+	
+	&_nav
+		+min(md)
+			+absolute(50%, 15px)
+			transform: translateY(-50%)

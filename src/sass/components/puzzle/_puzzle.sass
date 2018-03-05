@@ -4,21 +4,16 @@
 		flow: row wrap
 		basis: 100%
 		grow: 1
+	justify-content: center
 	list-style: none
 
 	+max(sm)
 		max-width: 300px
-		margin-top: 90px
+		margin: 90px auto 0
 
 	+min(sm)
 		flex:
 			basis: 0
-
-	+min(sm)
-		padding-left: 15px
-
-	+min(md)
-		padding-left: 30px
 
 	+e('item')
 		+relative
@@ -35,42 +30,47 @@
 					+size(250px, 375px)
 
 				+min(lg)
-					+size(302px, 501px)
+					+size(240px, 360px)
 
-				+min(xlg)
-					+size(362px, 541px)
+				// +min(xlg)
+				// 	+size(362px, 541px)
 
 		+m('1')
 			
 			+bg('../img/header__nav-item-1.png')
 			@extend %item-size
 
-			+min(sm)
-				margin-top: -150px
+			// +min(sm)
+			// 	margin-top: -150px
+
+			+max(sm)
+				left: -12px
+				top: 13px
 
 		+m('2')
 			+bg('../img/header__nav-item-2.png')
 			@extend %item-size
 			
 			+max(sm)
-				top: 30px
-				left: 15px
+				top: 13px
+				left: 6px
 
 			+min(sm)
 				margin-left: 30px
-				+max(lg)
-					top: -45px
 
-			+min(xlg)
-				margin-left: 60px
+			// +min(xlg)
+			// 	margin-left: 60px
 
 		+m('3')
 			margin-top: 30px
 			+bg('../img/header__nav-item-3.png')
 			@extend %item-size
 
-			+min(sm)
-				margin-top: -125px
+			+max(sm)
+				left: 46px
+
+			// +min(sm)
+			// 	margin-top: -125px
 
 		+m('4')
 			margin-top: 30px
@@ -79,29 +79,28 @@
 			+size(200px, 135px)
 
 			+max(sm)
-				margin-top: 10px
-				margin-left: -65px
-				left: 5px
+				margin-top: -45px
+				margin-left: -80px
 
 			+min(sm)
 				+size(330px, 220px)
-				margin-top: -345px
-				margin-left: 125px
+				// margin-top: -345px
+				// margin-left: 125px
 
 			+min(md)
 				+size(375px, 250px)
-				margin-top: -390px
-				margin-left: 140px
+				// margin-top: -390px
+				// margin-left: 140px
 
 			+min(lg)
 				+size(420px, 281px)
-				margin-top: -500px
-				margin-left: 195px
+				// margin-top: -500px
+				// margin-left: 195px
 
-			+min(xlg)
-				+size(541px, 362px)
-				margin-top: -572px
-				margin-left: 211px
+			// +min(xlg)
+			// 	+size(541px, 362px)
+			// 	margin-top: -572px
+			// 	margin-left: 211px
 
 
 		+ee('link')
@@ -175,8 +174,8 @@
 				+min(lg)
 					font-size: 26px
 
-				+min(xlg)
-					font-size: 36px
+				// +min(xlg)
+				// 	font-size: 36px
 
 			&:hover &
 				+ee('text')
