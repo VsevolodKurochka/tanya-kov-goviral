@@ -7,8 +7,18 @@
 	+min(sm)
 		+padding-y(45px)
 
+	// &:before
+	// 	content: ''
+	// 	+absolute(0, null, null, 0)
+	// 	+size(100%)
+	// 	background-color: transparentize($color-brand-1, 0.7)
+	// 	z-index: 1
+
 	+e('background')
 		+absolute(0, 0, null, null)
+
+	+e('container')
+		z-index: 1
 
 	+e('attention')
 		+absolute(30%, null, null, 50%)
@@ -53,7 +63,7 @@
 			+absolute(-20px, -20px)
 			font-weight: bold
 			font-size: 35px
-			padding: 0 8px 5px;
+			padding: 0 8px 0
 			color: $color-white
 			background-color: $color-brand-1
 			border: none
@@ -204,7 +214,7 @@
 			
 			#{$self}__item-content
 				max-width: 150px
-				font-size: 12px
+				font-size: 15px
 
 			+m('1')
 				top: 0
@@ -215,13 +225,13 @@
 
 				#{$self}__item-content
 					right: 35px
-					bottom: 66px
+					bottom: 57px
 					
 			+m('2')
 				bottom: 101px
 				left: 168px
 				#{$self}__item-content
-					bottom: 65px
+					bottom: 75px
 					left: 50%
 					transform: translateX(-50%)
 				#{$self}__item-icon
@@ -231,7 +241,7 @@
 				top: -10px
 				left: 330px
 				#{$self}__item-content
-					top: 95px
+					top: 105px
 					left: 40px
 
 				#{$self}__item-icon
@@ -242,8 +252,8 @@
 				top: -92px
 				left: 420px
 				#{$self}__item-content
-					top: 90px
-					left: 35px
+					top: 110px
+					left: 75px
 
 				#{$self}__item-icon
 					top: 15px
@@ -253,8 +263,8 @@
 				top: -5px
 				left: 507px
 				#{$self}__item-content
-					top: 2px
-					right: 30px
+					top: 25px
+					right: 50px
 					text-align: left
 				#{$self}__item-icon
 					right: 120px
@@ -266,7 +276,7 @@
 			
 			#{$self}__item-content
 				max-width: 200px
-				font-size: 14px
+				font-size: 16px
 
 			+m('1')
 				#{$self}__item-icon
@@ -275,14 +285,14 @@
 
 				#{$self}__item-content
 					right: 50px
-					bottom: 66px
+					bottom: 80px
 					max-width: 150px
 					
 			+m('2')
 				bottom: 52px
 				left: 195px
 				#{$self}__item-content
-					bottom: 75px
+					bottom: 90px
 					left: 50%
 					transform: translateX(-50%)
 				#{$self}__item-icon
@@ -292,7 +302,7 @@
 				top: -15px
 				left: 381px
 				#{$self}__item-content
-					top: 120px
+					top: 150px
 					left: 40px
 
 				#{$self}__item-icon
@@ -303,8 +313,8 @@
 				top: -125px
 				left: 485px
 				#{$self}__item-content
-					top: 120px
-					left: 50px
+					top: 145px
+					left: 100px
 					max-width: 175px
 
 				#{$self}__item-icon
@@ -316,7 +326,7 @@
 				left: 595px
 				#{$self}__item-content
 					top: 20px
-					right: 30px
+					right: 70px
 					text-align: left
 				#{$self}__item-icon
 					right: 145px
