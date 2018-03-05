@@ -1,10 +1,12 @@
 +b('puzzle')
+	height: 100%
 	display: flex
 	flex:
 		flow: row wrap
 		basis: 100%
 		grow: 1
 	justify-content: center
+	align-items: center
 	list-style: none
 
 	+max(sm)
@@ -32,16 +34,15 @@
 				+min(lg)
 					+size(240px, 360px)
 
-				// +min(xlg)
-				// 	+size(362px, 541px)
+		+min(sm)
+			&:not(:last-child)
+				margin-right: 15px
 
 		+m('1')
 			
 			+bg('../img/header__nav-item-1.png')
 			@extend %item-size
 
-			// +min(sm)
-			// 	margin-top: -150px
 
 			+max(sm)
 				left: -12px
@@ -55,12 +56,6 @@
 				top: 13px
 				left: 6px
 
-			+min(sm)
-				margin-left: 30px
-
-			// +min(xlg)
-			// 	margin-left: 60px
-
 		+m('3')
 			margin-top: 30px
 			+bg('../img/header__nav-item-3.png')
@@ -68,9 +63,6 @@
 
 			+max(sm)
 				left: 46px
-
-			// +min(sm)
-			// 	margin-top: -125px
 
 		+m('4')
 			margin-top: 30px
@@ -84,23 +76,12 @@
 
 			+min(sm)
 				+size(330px, 220px)
-				// margin-top: -345px
-				// margin-left: 125px
 
 			+min(md)
 				+size(375px, 250px)
-				// margin-top: -390px
-				// margin-left: 140px
 
 			+min(lg)
 				+size(420px, 281px)
-				// margin-top: -500px
-				// margin-left: 195px
-
-			// +min(xlg)
-			// 	+size(541px, 362px)
-			// 	margin-top: -572px
-			// 	margin-left: 211px
 
 
 		+ee('link')
@@ -150,6 +131,7 @@
 						left: -20px
 
 					+min(sm)
+						left: -30px
 						top: 100px
 
 				+m('3')

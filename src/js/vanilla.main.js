@@ -235,7 +235,15 @@ class Modal {
 		//clearInterval();
 
 		const scroll = new SmoothScroll('a[href*="#"]', {
-			offset: 70
+			offset: 70,
+			before: (anchor, toggle) => {
+				log(toggle);
+				if(hasClass(toggle, 'puzzle__item-link')){
+					let modal = toggle.closest('.modal');
+					removeClass(modal, 'modal_showing_in');
+					removeClass(document.body, 'modal-open');
+				}
+			}
 		});
 
 		const themePrefix = '';
