@@ -1,4 +1,5 @@
 +b('puzzle')
+	+relative
 	display: flex
 	flex:
 		flow: row wrap
@@ -17,6 +18,10 @@
 		align-items: center
 		flex:
 			basis: 0
+	+min(sm)
+		width: 550px
+		+margin-x(auto)
+		margin-top: 45px
 
 	+e('item')
 		+relative
@@ -29,60 +34,65 @@
 				+min(sm)
 					+size(220px, 330px)
 
-				+min(md)
-					+size(250px, 375px)
+			%item-size-4
+				
+				+size(200px, 135px)
 
-				+min(lg)
-					+size(240px, 360px)
+				+min(sm)
+					+size(330px, 220px)
+
+		+max(sm)
+
+			+m('1')
+				left: -12px
+				top: 13px
+
+			+m('2')
+				top: 13px
+				left: 6px
+
+			+m('3')
+				left: 46px
 
 		+min(sm)
-			&:not(:last-child)
-				margin-right: 15px
+			+absolute
+
+			+m('1')
+				top: 110px
+				left: 0
+
+			+m('2')
+				top: 0
+				left: 330px
+
+			+m('3')
+				top: 110px
+				left: 220px
+
+			+m('4')
+				top: 330px
+				left: 110px
 
 		+m('1')
 			
 			+bg('../img/header__nav-item-1.png')
 			@extend %item-size
 
-
-			+max(sm)
-				left: -12px
-				top: 13px
-
 		+m('2')
 			+bg('../img/header__nav-item-2.png')
 			@extend %item-size
-			
-			+max(sm)
-				top: 13px
-				left: 6px
 
 		+m('3')
-			margin-top: 30px
 			+bg('../img/header__nav-item-3.png')
 			@extend %item-size
 
-			+max(sm)
-				left: 46px
-
 		+m('4')
-			margin-top: 30px
 			+bg('../img/header__nav-item-4.png')
-			
-			+size(200px, 135px)
-
+			@extend %item-size-4
+	
 			+max(sm)
 				margin-top: -45px
 				margin-left: -80px
-
-			+min(sm)
-				+size(330px, 220px)
-
-			+min(md)
-				+size(375px, 250px)
-
-			+min(lg)
-				+size(420px, 281px)
 
 
 		+ee('link')
