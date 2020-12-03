@@ -2,35 +2,35 @@
 	var reviews = [
 		{
 			image: 'img/review-1.jpg',
-			name: 'Орест Шупенюк',
-			position: 'Психолог',
-			content: 'Я практикуючий психолог, та як просувати та більш маштабно організовувати тренінги та майстер класи , я не знав, я довірився цій команді. Я отримав організовану команду, яка працює в маркетингу, просуванні і продажах. Тільки вперед і разом.'
+			name: 'Orest Shupenyuk',
+			position: 'Psychologist',
+			content: 'I am a practicing psychologist, so I can help and organize trainings on a large scale, and I do not know, I am satisfied with the command. Having organized a team, I’m working on marketing, marketing and sales. Just go ahead and at once. '
 		},
 		{
 			image: 'img/review-2.jpg',
-			name: 'Светлана Фус',
-			position: 'Диетолог',
-			content: 'К моему бизнесу отнеслись ответственно и профессионально. Я очень довольна результатом, поскольку мы доработали маркетинг и усилили свои продажи. А это была основной моей целью. Все делалось четко, в сроки и с творческим подходом.'
+			name: 'Svetlana Fus',
+			position: 'Nutritionist',
+			content: 'My business was treated responsibly and professionally. I am very pleased with the result as we have refined marketing and increased our sales. And that was my main goal. Everything was done clearly, on time and with a creative approach. '
 		},
 		{
 			image: 'img/review-3.jpg',
-			name: 'Александр Сердюк',
-			position: 'Marketing Leader в компании «Multimed»',
-			content: 'Продвигали совместно новый продукт. Работа шла четко и слажено, все утверждалось быстро и работало на результат. Сотрудничая с Таней, с ее опытом, мы поняли что вникнуть в продукт, все продумать, настроить рекламные кампании это ее сильная сторона и довольны итогом.'
+			name: 'Alexander Serdyuk',
+			position: 'Marketing Leader at Multimed',
+			content: 'We jointly promoted a new product. The work went well and smoothly, everything was approved quickly and worked for the result. Working with Tanya, with her experience, we realized that to delve into the product, think over everything, set up advertising campaigns is her strong point and are happy with the result. '
 		},
 		{
 			image: 'img/review-4.jpg',
-			name: 'Светлана Грабова',
-			position: 'Сексолог',
-			content: 'Благодаря сотрудничеству мы организовали выездной тренинг и онлайн мероприятия. Отдельное спасибо, Катерине за ее подход и ответственность. Дальше работаем и сотрудничаем, только вместе с этой командой.'
+			name: 'Svetlana Grabova',
+			position: 'Sexologist',
+			content: 'Thanks to our cooperation, we organized field training and online events. Special thanks to Katerina for her approach and responsibility. We continue to work and cooperate, only together with this team. '
 		}
 	];
 
 +b.SECTION.review
 	.container
 		+e.H3.title.title-section._center
-			| Слово нашим 
-			span.bold клиентам
+			| Word to our
+			span.bold  clients
 		+e.content.owl-carousel
 			each review in reviews
 				+e.item
@@ -43,4 +43,4 @@
 							+e.P.item-info-name=review.name
 							+e.P.item-info-position=review.position
 		+e.footer
-			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Получить бесплатную консультацию и аудит
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Get a free consultation and audit

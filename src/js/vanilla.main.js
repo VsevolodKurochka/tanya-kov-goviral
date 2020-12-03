@@ -276,7 +276,7 @@ class Modal {
 			const jsNav = document.getElementById('navigation');
 
 			// Navigation links
-				const jsNavLinks = document.querySelectorAll(`${themePrefix}nav__menu a[href*="#"]`);
+				const jsNavLinks = document.querySelectorAll(`.nav__menu a[href*="#"]`);
 
 				for(var i = 0; i < jsNavLinks.length; i++){
 					jsNavLinks[i].addEventListener('click', (e) => {

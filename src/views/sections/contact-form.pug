@@ -5,37 +5,37 @@
 			+e.column._text.col-12.col-sm-6.wow.fadeInUpBig(data-wow-delay="0.1s")
 				+e.content
 					+e.P.content-title 
-						| Как думаете, 
-						span.bold сколько еще продержится Ваш бизнес, 
-						| если 
-						span.bold Вы продолжите использовать старые подходы 
-						| в маркетинге, продажах и клиент-сервисе?
-					p Не нужно проверять.
+						| What do you think,
+						span.bold  how long will your business last,
+						| if
+						span.bold  you will continue to use old approaches
+						| in marketing, sales and customer service?
+					p No need to check.
 					p
-						span.bold Оставьте заявку 
-						| и мы покажем, какой потенциал роста есть у Вашего бизнеса
+						span.bold Leave a request
+						| and we will show you what growth potential your business has
 			+e.column._phone.col-12.col-sm-6.wow.fadeInUpBig(data-wow-delay="0.3s")
 				+e.phone
 					+e.IMG.phone-img(src="img/iphone.png")
 					+e.phone-body
 						+e.P.phone-body-title 
-							|Заполните форму
+							|Fill the form
 							br
-							|и 
-							span.bold мы Вам перезвоним
+							|and
+							span.bold we will call you back
 						+b.FORM.form._block(action="mail.php" method="POST")
 							+e.content
 								+e.row
 									+e.INPUT.control(name="vname" type="text")
-									+e.label Ваше имя
+									+e.label Name
 								+e.row
 									+e.INPUT.control(name="vemail" type="email")
-									+e.label Ваш email
+									+e.label Email
 								+e.row
 									+e.INPUT.control(name="vphone" type="tel")
-									+e.label Ваш телефон
+									+e.label Phone
 								+e.row
-									+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Проконсультироваться<br>бесплатно
+									+e.BUTTON.submit.btn._brand-1._shadow-brand-1._size-fluid.effect._bounce-top(type="submit") Consult for free
 	+e.info
 		+e.container.container
 			+e.row.row
@@ -44,10 +44,7 @@
 				+e.info-content.col-12.col-sm-10.col-md-11
 					+e.info-buttons
 						+e.info-buttons-row
-							+e.BUTTON.info-button(data-action="modal" data-open="#modal-politic") Политика конфиденциальности
-							+e.BUTTON.info-button(data-action="modal" data-open="#modal-otkaz") Отказ от ответственности
-						+e.info-buttons-row
-							+e.A.info-link(href="tel: (067) 127 00 27") (067) 127 00 27
-							+e.A.info-link(href="tel: (067) 127 02 27") (067) 127 02 27
+							+e.A.info-link(href="tel: +38 (067) 127 00 27") +38 (067) 127 00 27
+							+e.A.info-link(href="tel: +38 (099) 289 33 75") +38 (099) 289 33 75
 					+e.info-social
 						+social('_inline _brand-1')
